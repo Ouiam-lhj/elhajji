@@ -1,6 +1,6 @@
-Voici un fichier README adapté à votre projet pour le cours de développement logiciel :
 
-Polymorphism Project - Ouiam El Hajji (BIM - INSA Lyon)
+
+**Polymorphism Project - Ouiam El Hajji (BIM - INSA Lyon)**
 Overview
 This project demonstrates object-oriented programming concepts such as polymorphism, inheritance, and dynamic memory management using a simple race simulation. The project involves implementing a base class Character and its specialized derived classes, Mario and Yoshi, with distinct behaviors. The functionality is tested through STL container manipulation and memory leak checks.
 
