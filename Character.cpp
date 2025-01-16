@@ -1,7 +1,23 @@
 #include "Character.h"
-
+#include <iostream>
+#include <vector>
+#include "Character.h"
+#include "Mario.h"
+#include "Mario.cpp"
+#include "Yoshi.h"
 #include <iostream>
 #include <string>
+
+using namespace std;
+int main() {
+	cout << "Hello World!" << endl;
+	Mario driver; // Pointeur de type base vers un objet dérivé
+	std::cout << driver.WhatAmI() << std::endl; // Appel polymorphique à WhatAmI
+
+
+	return 0;
+
+}
 
 //constructeur par défaut
 Character::Character(){
