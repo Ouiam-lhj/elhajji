@@ -11,7 +11,8 @@ class Yoshi : public Character {
 	    Yoshi();
 
 	//Destructeur
-	    virtual ~Yoshi();
+		~Yoshi() override;
+		virtual void Accelerate() override;
 
         //WhatAmI
 	    virtual std::string WhatAmI() const;
