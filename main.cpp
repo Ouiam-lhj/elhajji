@@ -1,6 +1,11 @@
 #include "Character.h"
+#include "Character.cpp"
 #include "Mario.h"
+#include "Mario.cpp"
+
 #include "Yoshi.h"
+#include "Yoshi.cpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
