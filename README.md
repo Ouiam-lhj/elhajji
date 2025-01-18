@@ -1,10 +1,12 @@
 
 
-**Polymorphism Project - Ouiam El Hajji (BIM - INSA Lyon)**
+*Polymorphism Project - Ouiam El Hajji (BIM - INSA Lyon)*
+
+
 Overview
 This project demonstrates object-oriented programming concepts such as polymorphism, inheritance, and dynamic memory management using a simple race simulation. The project involves implementing a base class Character and its specialized derived classes, Mario and Yoshi, with distinct behaviors. The functionality is tested through STL container manipulation and memory leak checks.
 
-Implementation Details
+**Implementation Details**
 1. Class Character
 The base class Character includes:
 Data Members:
@@ -87,8 +89,8 @@ sebastien.valette@creatis.insa-lyon.fr
 Deadline
 The project must be submitted by January 19, 2025.
 
-Author
-Ouiam El Hajji
+*Author*
+*Ouiam El Hajji*
  BIM - INSA Lyon
  Course: Software Development
 
