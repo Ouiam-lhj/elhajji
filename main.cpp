@@ -1,5 +1,6 @@
 #include "Character.h"
 #include "Character.cpp"
+
 #include "Mario.h"
 #include "Mario.cpp"
 
@@ -13,27 +14,38 @@
 int main() {
     std::cout << "Hello World!" << std::endl;
 
-    // Mario driver
-    Mario driver_mario;
-    std::cout << driver_mario.WhatAmI() << std::endl;
-    std::cout << "Driver one speed is: " << driver_mario.speed() << std::endl;
-    std::cout << "The max speed is: " << driver_mario.max_speed() << std::endl;
+    // driver Mario tests
+    Mario character_mario;
+    std::cout << character_mario.WhatAmI() << std::endl;
+    std::cout << "Driver one speed is: " << character_mario.speed() << std::endl;
+    std::cout << "The max speed is: " << character_mario.max_speed() << std::endl;
     std::cout << "Acceleration!" << std::endl;
-    driver_mario.Accelerate();
-    std::cout << "Driver one speed is: " << driver_mario.speed() << std::endl;
+    character_mario.Accelerate();
+    std::cout << "Driver one speed is: " << character_mario.speed() << std::endl;
     std::cout << "Brake!" << std::endl;
-    driver_mario.Break();
-    std::cout << "Driver one speed is: " << driver_mario.speed() << std::endl;
+    character_mario.Break();
+    std::cout << "Driver one speed is: " << character_mario.speed() << std::endl;
 
-    // Yoshi driver
-    Yoshi driver2_yoshi;
+    // driver Yoshi tests
+    Yoshi character2_yoshi;
     std::cout << "Driver two is: " << std::endl;
-    std::cout << driver2_yoshi.WhatAmI() << std::endl;
+    std::cout << character2_yoshi.WhatAmI() << std::endl;
     std::cout << "Acceleration!" << std::endl;
-    driver2_yoshi.Accelerate();
-    std::cout << "Driver two speed is: " << driver2_yoshi.speed() << std::endl;
-    driver2_yoshi.Break();
-    driver2_yoshi.Break();
+    character2_yoshi.Accelerate();
+    std::cout << "Driver two speed is: " << character2_yoshi.speed() << std::endl;
+    character2_yoshi.Break();
+    character2_yoshi.Break();
+
+
+    // Now let the race begin
+
+    // I chose the "vector" stl container
+    std::vector<Character*> characters;
+
+    // Ajoutez un Mario et un Yoshi
+    characters.push_back(new Mario);
+    characters.push_back(new Yoshi);
+
 
     return 0;
 }
