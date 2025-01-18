@@ -12,12 +12,14 @@ class Yoshi : public Character {
 
 	//Destructeur
 		~Yoshi() override;
-		virtual void Accelerate() override;
+		void Accelerate() override;
 
         //WhatAmI
-	    virtual std::string WhatAmI() const;
-
-
+		std::string WhatAmI() const override;
+		void choose_crest();
+		int how_many_crests();
+		protected:
+			int crest_;
 };
 
 #endif
