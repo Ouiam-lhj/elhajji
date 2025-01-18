@@ -42,7 +42,7 @@ int main() {
     // I chose the "vector" stl container
     std::vector<Character*> characters;
 
-    // Ajoutez un Mario et un Yoshi
+    // Adding one Mario and one Yoshi
     characters.push_back(new Mario);
     characters.push_back(new Yoshi);
 
