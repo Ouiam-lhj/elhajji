@@ -11,7 +11,9 @@ Yoshi::Yoshi() : crest_(new int(1)) {} // Par défaut, un Yoshi a une crête//De
 Yoshi::Yoshi(int crests) : crest_(new int(crests)) {}
 
 //Destructor
-Yoshi::~Yoshi() = default;
+Yoshi::~Yoshi() {
+delete crest_; // Free the memory allocated for crest_
+    }
 
 //WhatAmI
 std::string Yoshi::WhatAmI() const{

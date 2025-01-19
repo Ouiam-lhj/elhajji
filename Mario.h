@@ -11,11 +11,11 @@ class Mario : public Character {
 	    Mario();
 
 		//Destructeur
-	    virtual ~Mario();
+        virtual ~Mario() ;
 
         //WhatAmI
 		std::string WhatAmI() const override;
 
 };
 
-#endif 
+#endif

@@ -1,8 +1,6 @@
 #include "Character.h"
 #include "Mario.h"
-#include "Mario.cpp"
 #include "Yoshi.h"
-#include "Yoshi.cpp"
 
 #include <iostream>
 #include <string>
