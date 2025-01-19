@@ -4,14 +4,18 @@
 #include <string>
 #include <iostream>
 
-//Constructor
-Yoshi::Yoshi() {}
+//Default constructor
+Yoshi::Yoshi() : crest_(new int(1)) {} // Par défaut, un Yoshi a une crête//Destructor
+
+// Constructeur avec un nombre de crêtes
+Yoshi::Yoshi(int crests) : crest_(new int(crests)) {}
+
 //Destructor
 Yoshi::~Yoshi() = default;
 
 //WhatAmI
 std::string Yoshi::WhatAmI() const{
-	return "It's Yoshi!";
+	return std::to_string(*crest_) + "-crested Yoshi";;
 }
 // Surcharge de Accelerate
 void Yoshi::Accelerate() {
@@ -22,14 +26,7 @@ void Yoshi::Accelerate() {
     }
 }
 
-//Crests
-void Yoshi::choose_crest() {
-    int nb_crests;
-    std::cout<<"Number of crests of your Yoshi ?"<<std::endl;
-    std::cin>>nb_crests;
-    crest_ = nb_crests;
-}
-// Get the number of crests of the Yoshi
-int Yoshi::how_many_crests() {
-    return crest_;
+// Getter pour le nombre de crêtes
+int Yoshi::how_many_crests() const {
+    return *crest_;
 }

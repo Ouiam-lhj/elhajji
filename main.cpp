@@ -44,8 +44,34 @@ int main() {
 
     // Adding one Mario and one Yoshi
     characters.push_back(new Mario);
-    characters.push_back(new Yoshi);
+    characters.push_back(new Yoshi(3));
 
+    // Giving the character's identities
+    std::cout << "Characters! Who are you? :" << std::endl;
+    for (const auto& character : characters) {
+        std::cout << character->WhatAmI() << std::endl;
+    }
+
+    // Both characters accelerations
+    std::cout << "\nAcceleration test:" << std::endl;
+    int mario_speed = 0;
+    int yoshi_speed = 0;
+
+    for (auto& character : characters) {
+        character->Accelerate();
+        std::cout << character->WhatAmI() << " speed: " << character->speed() << std::endl;
+        if (character->WhatAmI().find("Mario") != std::string::npos) {
+            mario_speed = character->speed();
+        } else if (character->WhatAmI().find("Yoshi") != std::string::npos) {
+            yoshi_speed = character->speed();
+        }
+    }
+    // Test to see if Yoshi in fact goes faster than Mario
+    if (yoshi_speed > mario_speed) {
+        std::cout << "Test of acceleration passed: Yoshi is faster than Mario." << std::endl;
+    } else {
+        std::cout << "Test of acceleration failed: Mario is faster or equal to Yoshi." << std::endl;
+    }
 
     return 0;
 }

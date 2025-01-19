@@ -7,19 +7,20 @@
 class Yoshi : public Character {
 
     public:
-        //Constructeur
+        //Defauly constructeur
 	    Yoshi();
-
+		//Constructor crests
+		Yoshi(int crests);
 	//Destructeur
 		~Yoshi() override;
 		void Accelerate() override;
 
         //WhatAmI
 		std::string WhatAmI() const override;
-		void choose_crest();
-		int how_many_crests();
+
+		int how_many_crests() const;
 		protected:
-			int crest_;
+			int* crest_;
 };
 
 #endif
